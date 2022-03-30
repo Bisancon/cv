@@ -1,0 +1,27 @@
+body {
+    background-color: #82d380;
+}
+
+h1{
+    color: rgb(0, 126, 0);
+}
+h2{
+    color: rgb(0, 126, 0);
+}
+h3{
+    color: rgb(0, 126, 0);
+}
+
+hr {
+    border-style: none;
+    border-top-style: dotted;
+    background-color: #82d380;
+    border-width: 5px;
+    width: 10%;
+}
+
+table{
+    color: rgb(0, 126, 0);
+    border-style: inset;
+    border-width: 5px;
+}

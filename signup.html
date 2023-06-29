@@ -1,0 +1,137 @@
+﻿<?php
+require "db.php";
+
+$data = $_POST;
+if( isset($data['do_signup']) )
+{
+  // Тут регистрация
+
+
+  $errors = array();
+  if( trim($data['name']) == '' )
+  {
+    $errors[] = 'Введите полное имя!';
+  }
+
+
+  $errors = array();
+  if( trim($data['login']) == '' )
+  {
+    $errors[] = 'Введите логин!';
+  }
+
+  if( trim($data['email']) == '' )
+  {
+    $errors[] = 'Введите Email!';
+  }
+
+  if( $data['password'] == '' )
+  {
+    $errors[] = 'Введите пароль';
+  }
+
+  if( $data['password_2'] != $data['password'] )
+  {
+    $errors[] = 'Повторный пароль введён не верно!';
+  }
+
+  if( R::count('users', "login = ?", array($data['login'])) > 0 )
+  {
+    $errors[] = 'Пользователь с таким логином уже существует!';
+  }
+  if( R::count('users', "email = ?", array($data['email'])) > 0 )
+  {
+    $errors[] = 'Пользователь с таким email уже существует!';
+  }
+
+  if( empty($errors) )
+  {
+    //Всё хорошо
+    $user = R::dispense('users');
+    $user->login = $data['login'];
+    $user->email = $data['email'];
+    $user->password = password_hash($data[password], PASSWORD_DEFAULT);
+    R::store($user);
+      echo  '<div style="color: green;">Вы успешно зарегестрированы</div><hr>';
+  } else
+  {
+    echo  '<div style="color: red;">'.array_shift($errors).'</div><hr>';
+  }
+
+}
+
+?>
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="author" content="Неклюдова Анна">
+  <link rel="stylesheet" href="css/signup.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/fonts.css">
+  <title>Регистрация</title>
+</head>
+
+<body>
+
+<headertop>
+  <div class="header_top">
+    <div class="container">
+      <div class="header__contacts">
+        <a class="header__phone" href="tel:89030040402">+7 (903) 004 04 02</a>
+        <a class="header__email" href="#">volgahotel@gmail.com</a>
+        <a class="header_btn" href="index.php">Личный кабинет</a>
+      </div>
+    </div>
+  </div>
+  </headertop>
+
+  <main>
+    <div class="osnova">
+        <div class="form">
+      <div class="formWrapper">
+<form action="signup.php" method="post">
+
+
+  <p>
+    <p><strong class="naming">Полное имя</strong></p>
+    <input class="form-input" type="text" name="login" value="<?php echo @$data['login']; ?>">
+  </p>
+
+  <p>
+    <p><strong class="naming">Ваш логин</strong></p>
+    <input class="form-input" type="text" name="login" value="<?php echo @$data['login']; ?>">
+  </p>
+
+  <p>
+    <p><strong class="naming">Ваш Email</strong></p>
+    <input class="form-input" type="email" name="email" value="<?php echo @$data['email']; ?>">
+  </p>
+
+  <p>
+    <p><strong class="naming">Ваш пароль</strong></p>
+    <input class="form-input" type="password" name="password" value="<?php echo @$data['password']; ?>">
+  </p>
+
+  <p>
+    <p><strong class="naming">Ваш пароль ещё раз</strong></p>
+    <input class="form-input" type="password" name="password_2" value="<?php echo @$data['password_2']; ?>">
+  </p>
+
+  <p>
+    <button class="about__btn" type="sumbit" name="do_signup">Зарегестрироваться</button>
+  </p>
+
+</fopm>
+</div>
+</div>
+<div class="col-sm-8">
+  <h1 class="col-title">Зарегистрируйся сейчас!</h1>
+  <p class="col-text">Заведи свой аккаунт на VOLGA Hotel, чтобы выбрать и забронировать любой из доступных номеров в нашем отеле. В личном кабинеты вы сможете отслеживать статус вашей брони </p>
+</div>
+</main>
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Booking</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.min.js">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/style_booking.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/fonts.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header_top">
+      <div class="container">
+        <div class="header__contacts">
+          <a class="header__phone" href="tel:89030040402">+7 (903) 004 04 02</a>
+          <a class="header__email" href="#">volgahotel@gmail.com</a>
+          <a class="header_btn" href="#">Личный кабинет</a>
+        </div>
+      </div>
+    </div>
+    <div class="header_content">
+      <div class="container">
+        <div class="header__content-inner">
+          <div class="header__logo"
+          <a href="#">
+            <img src="img/logo.png"
+          </a>
+        </div>
+        <nav class="menu">
+          <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="rooms.html">Номера</a></li>
+            <li><a href="Services.html">Услуги</a></li>
+            <li><a href="#">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+<footer id="footer">
+    <div class="center">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="formWrapper">
+              <form action="">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Почта</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Тип номера</label>
+                  <select name="rooms" id="rooms">
+                  <option value="">Президенский люкс</option>
+                  <option value="">Классический люкс</option>
+                  <option value="">Апартаменты</option>
+                </select>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-6">
+                    <form action="form.php" method="post">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Дата заезда</label>
+                      <input type="date"type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Дата выезда</label>
+                      <input type="date" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    </div>
+                  </div>
+                </div>
+                  <div class="row">
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Кол-во взрослых</label>
+                      <select name="rooms" id="rooms">
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Кол-во детей</label>
+                      <select name="rooms" id="rooms">
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <button class="about__btn">Забронировать</button>
+              </form>
+            </div>
+          </div>
+          <div class="col-sm-8">
+            <h1 class="col-title">Забронируй свой номер</h1>
+            <p class="col-text">Во время бронирования, необходимо указать вашу почту, тип номера дату заезда и выезда, количество взрослых и детей. После того как вы нажмёте на кнопку «Забронировать», в течении нескольких минут на вашу почту придёт подтверждение о бронирование и реквизиты на предоплату, так же возможно оплатить номер на месте в день заезда </p>
+
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+</body>
+</html>

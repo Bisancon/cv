@@ -1,0 +1,138 @@
+.header_top {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #85d0f8;
+  width: 200vh;
+  height: 45px;
+}
+.container{
+  max-width: 1170;
+  margin: 0 auto;
+  padding: 0 205px;
+}
+.header_btn{
+
+  float: right;
+  left: 85px;
+  line-height: 36px;
+  font-family: 'Roboto', sans-serif;
+  color: #d2d2c6;
+  background-color: #404a87;
+  padding: 5px 30px 4px 50px;
+  font-size: 16px;
+  position: relative;
+  text-decoration: none;
+}
+.header_btn:before{
+  content: "\f090";
+  font-family: 'icomoon';
+  position: absolute;
+  left: 22px;
+  color: #d2d2c6;
+}
+.header__contacts{
+  padding-left: 185px;
+}
+.header__contacts:after{
+  content: "";
+  clear: both;
+  display: block;
+}
+.header__phone,
+.header__email{
+  color: #e9f5f5;
+  letter-spacing: 0.25px;
+  line-height: 45px;
+position: relative;
+
+}
+.header__phone{
+  padding-left: 20px;
+  padding-right: 30px;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+}
+.header__phone:before{
+    content: "\f095";
+    font-family: 'icomoon';
+    position: absolute;
+    left: 0;
+    color: #404a87;
+}
+.header__email{
+  padding-left: 24px;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+.header__email:before{
+    content: "\f003";
+  font-family: 'icomoon';
+  position: absolute;
+  left: 0;
+  color: #404a87;
+}
+
+.osnova {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  right: 0;
+  background: url('../img/signup.jpg') no-repeat;
+  height: 100vh;
+}
+.form {
+  position: absolute;
+  top: 100px;
+  left: 190px;
+  height: 500px;
+  width: 270px;
+  background-color: #fff;
+  padding: 36px 41px;
+  border-radius: 25px;
+}
+.naming {
+  color: #212020;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+}
+.about__btn {
+  border-radius: 5px;
+  background: #404a87;
+  color: #d2d2c6;
+  line-height: 26px;
+  letter-spacing: 0.25px;
+  padding: 5px 38px;
+  border: 3px solid #404a87;
+  font-family: 'Roboto', sans-serif;
+}
+.form-input{
+  color: #212020;
+  height: 30px;
+  width: 260px;
+}
+.col-sm-8{
+  position: absolute;
+  top: 80px;
+  left: 570px;
+  max-width: 710px;
+}
+.col-title {
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 36px;
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  margin-bottom: 22px;
+  font-family: 'Roboto', sans-serif;
+}
+.col-text{
+
+  line-height: 24px;
+  font-size: 18px;
+  color: #d3d2d2;
+  margin-bottom: 50px
+}
